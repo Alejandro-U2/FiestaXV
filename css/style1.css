@@ -1,0 +1,101 @@
+/* ===== ESTILOS GENERALES ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFD7D7;
+    color: #4a4a4a;
+    overflow: hidden;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background-image: url('tu-fondo.jpg'); /* Cambia por tu fondo */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: rgba(255, 215, 215, 0.85);
+    backdrop-filter: blur(2px);
+}
+
+/* ===== FECHA ===== */
+.date {
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    color: #D4AF37;
+    font-weight: 500;
+}
+
+/* ===== TÍTULO ===== */
+.title-container {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: #6c3b3b;
+}
+
+
+/* ===== TEXTO MÚSICA ===== */
+.music-text {
+    font-size: 1.5em;
+    color: #A56C6C;
+    font-weight: 500;
+    
+    margin-bottom: 50px;
+}
+
+/* ===== BOTONES ===== */
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #C38888;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1em;
+    border: 2px solid #D4AF37; /* borde dorado */
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #A56C6C;
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .name {
+        font-size: 5em;
+    }
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

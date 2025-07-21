@@ -1,0 +1,38 @@
+.ribbon-simple {
+  position: relative;
+  background: #5a5a5a;
+  color: #fff;
+  display: inline-block;
+  padding: 12px 60px;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 170px;
+  min-height: 20px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+.ribbon-simple span {
+  position: relative;
+  z-index: 2;
+}
+.ribbon-simple:before,
+.ribbon-simple:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 100%;
+  background: #5a5a5a;
+  z-index: 1;
+}
+.ribbon-simple:before {
+  left: -28px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+.ribbon-simple:after {
+  right: -28px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}

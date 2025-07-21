@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitación</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="date">25.10.2025</div>
+
+        <div class="title-container">
+            <h1>Bienvenidos a la invitación de<br>Fernanda</h1>
+
+        </div>
+
+        <div class="music-text">La música de fondo es parte de la experiencia</div>
+
+        <div class="buttons-container">
+            <!-- Botón con música -->
+            <a href="#" class="button" id="btnConMusica">Ingresar con música</a>
+            <!-- Botón sin música -->
+            <a href="pagina principal.html" class="button">Ingresar sin música</a>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('btnConMusica').addEventListener('click', function (e) {
+        e.preventDefault();
+        // Guardar la preferencia en localStorage
+        localStorage.setItem('reproducirMusica', '1');
+        // Redireccionar a la página principal
+        window.location.href = 'pagina principal.html';
+    });
+    </script>
+</body>
+</html>
