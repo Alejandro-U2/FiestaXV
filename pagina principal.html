@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="css/style_completo.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300&family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap"
-    rel="stylesheet" />
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300&family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap"rel="stylesheet" />
+
+
+
+  </head>
 
 <body>
   <!-- ========================================================
@@ -127,6 +128,12 @@
     </main>
   </section>
 
+
+<section class="seccion-curva">
+  <div class="curva-transicion"></div>
+</section>
+
+
   <!-- ========================================================
        SECCIÓN 2: CUENTA REGRESIVA
   ========================================================= -->
@@ -186,11 +193,12 @@
         <h2>Ceremonia</h2>
         <div class="detalle">
           <h3>Día</h3>
-          <p>Sábado 25 de Octubre - 16:00 hrs</p>
+          <a href="#" class="boton-personalizado">Sábado 25 de Octubre - 16:00 hrs</a>
+
         </div>
         <div class="detalle">
           <h3>Lugar</h3>
-          <p>Iglesia católica "Belen"</p>
+          <a href="#" class="boton-personalizado">Iglesia católica "Belen"</a>
         </div>
         <div class="detalle">
           <h3>Dirección</h3>
@@ -201,6 +209,8 @@
             <a href="https://waze.com/ul/h9fxd56dk3" target="_blank" class="boton-ubicacion boton-waze">WAZE</a>
           </div>
         </div>
+
+
       </section>
 
       <!-- === FIESTA === -->
@@ -208,7 +218,7 @@
         <div class="icono">
           <img src="iconos/fiesta.png" alt="Icono Fiesta" class="icono-fiesta" />
         </div>
-        <h2>Fiesta</h2>
+        <h2>Celebración</h2>
         <div class="detalle">
           <h3>Día</h3>
           <p>Sábado 25 de Octubre - 17:00 hrs</p>
@@ -245,26 +255,147 @@
     <!-- Carrusel de fotos -->
     <div class="slider-container">
       <div class="slider">
-        <div class="slide"><div class="polaroid"><img src="Fotos/foto1.jpg"alt=""></div></div>
-        <div class="slide"><div class="polaroid"><img src="Fotos/foto10.jpg"alt=""></div></div>
-        <div class="slide"><div class="polaroid"><img src="Fotos/foto11.jpg"alt=""></div></div>
-        <div class="slide"><div class="polaroid"><img src="Fotos/foto20.jpg"alt=""></div></div>
-        <div class="slide"><div class="polaroid"><img src="Fotos/foto19.jpg"alt=""></div></div>
-        <div class="slide"><div class="polaroid"><img src="Fotos/foto18.jpg"alt=""></div></div>
+        <div class="slide">
+          <div class="polaroid"><img src="Fotos/foto1.jpg" alt=""></div>
+        </div>
+        <div class="slide">
+          <div class="polaroid"><img src="Fotos/foto10.jpg" alt=""></div>
+        </div>
+        <div class="slide">
+          <div class="polaroid"><img src="Fotos/foto11.jpg" alt=""></div>
+        </div>
+        <div class="slide">
+          <div class="polaroid"><img src="Fotos/foto20.jpg" alt=""></div>
+        </div>
+        <div class="slide">
+          <div class="polaroid"><img src="Fotos/foto19.jpg" alt=""></div>
+        </div>
+        <div class="slide">
+          <div class="polaroid"><img src="Fotos/foto18.jpg" alt=""></div>
+        </div>
 
-           <button onclick="prevSlide()" class="slider-btn slider-btn-prev">‹</button>
-          <button onclick="nextSlide()" class="slider-btn slider-btn-next">›</button>
+        <button onclick="prevSlide()" class="slider-btn slider-btn-prev">‹</button>
+        <button onclick="nextSlide()" class="slider-btn slider-btn-next">›</button>
       </div>
 
-   
+
 
       <!-- Puntos de navegación del slider -->
       <div class="slider-dots">
         <span class="dot active"></span>
         <span class="dot"></span>
-   
+
       </div>
     </div>
+  </section>
+
+
+  <!---Fiesta/Drescode-->
+  <section class="seccion-fiesta">
+    <h2>Fiesta</h2>
+    <p class="descripcion">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+    <div class="tarjetas-fiesta">
+      <div class="tarjeta">
+        <h3>Música</h3>
+        <div class="icono">
+          <img src="iconos/notas-musicales.png" alt="Icono música" class="icono-img animated-icon">
+        </div>
+        <p>¿Cuál es la canción que no debe faltar en la playlist de la fiesta?</p>
+        <button class="boton-rosa" onclick="mostrarPopup('popupmusica')">Sugerir canción</button>
+      </div>
+
+
+      <div class="tarjeta">
+        <h3>Dress Code</h3>
+        <div class="icono">
+          <img src="iconos/corbata.png" alt="Icono dress code" class="icono-img animated-icon">
+        </div>
+        <p>Una orientación para tu vestuario</p>
+        <button class="boton-rosa" onclick="mostrarPopup('popupDressCode')">Ver Más</button>
+      </div>
+
+
+      <div class="tarjeta">
+        <h3>Tips y Notas</h3>
+        <div class="icono">
+          <img src="iconos/lapiz.png" alt="Icono tips y notas" class="icono-img animated-icon">
+        </div>
+        <p>Información adicional para tener en cuenta</p>
+        <button class="boton-rosa" onclick="mostrarPopup('popupinfo')">+ Info</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========================================================
+       MODALES
+  ========================================================= -->
+  <!---Musica-->
+  <div id="popupmusica" class="popup-overlay">
+    <div class="popup-card">
+      <div class="popup-icon">
+        <img src="iconos/notas-musicales.png" alt="Icono música">
+      </div>
+      <button class="cerrar-popup" onclick="cerrarPopup('popupmusica')">X</button>
+      <h3>Música</h3>
+      <p>¡Ayúdame a crear la mejor playlist! Agrega una canción que no puede faltar en la fiesta.</p>
+      <div style="margin-top: 20px;">
+        <button class="boton-rosa"
+          onclick="window.open('https://www.youtube.com/playlist?list=PLEvWaXkEXU2u6gAIhNxC10ZAuuou-Nx32&jct=Zm0bi9HXhd7KzRumhyPkoQ')">Agregar
+          desde YouTube</button>
+        <button class="boton-rosa"
+          onclick="window.open('https://open.spotify.com/playlist/0lqBfw1g6uNO51TV3EUG8E?si=42511c8e171a4865&pt=e1b367cbaa538d03f2183d0374c4b16f')">Agregar
+          desde Spotify</button>
+      </div>
+    </div>
+  </div>
+  <!---Dresscode-->
+  <div id="popupDressCode" class="popup-overlay">
+    <div class="popup-card">
+      <div class="popup-icon">
+        <img src="iconos/corbata.png" alt="Icono Dress Code">
+      </div>
+      <button class="cerrar-popup" onclick="cerrarPopup('popupDressCode')">X</button>
+      <h3>Dress Code</h3>
+      <p>Vístete formal y con estilo. Queremos verte increíble y listo para disfrutar una noche inolvidable.</p>
+    </div>
+  </div>
+  <!---Notas-->
+  <div id="popupinfo" class="popup-overlay">
+    <div class="popup-card">
+      <div class="popup-icon">
+        <img src="iconos/lapiz.png" alt="Icono Dress Code">
+      </div>
+      <button class="cerrar-popup" onclick="cerrarPopup('popupinfo')">X</button>
+      <h3></h3>
+      <p>Formal, pero con toda la actitud para divertirte.</p>
+    </div>
+  </div>
+
+  <div id="popupRegalo" class="popup-overlay">
+    <div class="popup-card">
+      <div class="popup-icon">
+        <img src="iconos/regalo.png" alt="Icono-regalo">
+      </div>
+      <button class="cerrar-popup" onclick="cerrarPopup('popupRegalo')">X</button>
+      <h3></h3>
+      <p>“Si deseas hacer un obsequio en efectivo, te agradeceremos
+        depositarlo en un sobre y colocarlo en el buzón que estará disponible
+        en la recepción del evento. Los sobres estarán a tu disposición junto al buzón.”</p>
+    </div>
+  </div>
+
+  <!---Regalos-->
+  <section class="seccion-regalos">
+    <h2>Regalos</h2>
+    <h3>Buzón de obsequios</h3>
+    <p class="subtexto">Si deseas regalarnos algo más que tu hermosa presencia…</p>
+    <div class="icono-regalo">
+      <img src="iconos/regalo.png" alt="Icono regalo">
+    </div>
+    <button class="boton-rosa" onclick="mostrarPopup('popupRegalo')">+ Info</button></div>
   </section>
 
   <!-- ========================================================
@@ -319,53 +450,64 @@
       }, 1000);
 
       // ================== Galería de fotos (carrusel automático y manual) ==================
-        let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = slides.length;
+      let slideIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const totalSlides = slides.length;
 
-function updateSlides() {
-  slides.forEach((slide, idx) => {
-    slide.classList.remove('active', 'prev', 'next', 'off');
-    if(idx === slideIndex) {
-      slide.classList.add('active');
-    } else if(idx === (slideIndex - 1 + totalSlides) % totalSlides) {
-      slide.classList.add('prev');
-    } else if(idx === (slideIndex + 1) % totalSlides) {
-      slide.classList.add('next');
-    } else {
-      slide.classList.add('off');
-    }
-  });
+      function updateSlides() {
+        slides.forEach((slide, idx) => {
+          slide.classList.remove('active', 'prev', 'next', 'off');
+          if (idx === slideIndex) {
+            slide.classList.add('active');
+          } else if (idx === (slideIndex - 1 + totalSlides) % totalSlides) {
+            slide.classList.add('prev');
+          } else if (idx === (slideIndex + 1) % totalSlides) {
+            slide.classList.add('next');
+          } else {
+            slide.classList.add('off');
+          }
+        });
 
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[slideIndex].classList.add('active');
-}
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[slideIndex].classList.add('active');
+      }
 
-function nextSlide() {
-  slideIndex = (slideIndex + 1) % totalSlides;
-  updateSlides();
-}
-function prevSlide() {
-  slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
-  updateSlides();
-}
+      function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        updateSlides();
+      }
+      function prevSlide() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        updateSlides();
+      }
 
-const galleryInterval = setInterval(nextSlide, 5000);
+      const galleryInterval = setInterval(nextSlide, 5000);
 
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    slideIndex = index;
-    updateSlides();
-    clearInterval(galleryInterval);
-  });
-});
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          slideIndex = index;
+          updateSlides();
+          clearInterval(galleryInterval);
+        });
+      });
 
-if (totalSlides > 0) updateSlides();
+      if (totalSlides > 0) updateSlides();
 
 
     });
   </script>
+
+  <script>
+    function mostrarPopup(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function cerrarPopup(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+
 </body>
 
 </html>
