@@ -10,9 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300&family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap"rel="stylesheet" />
-
-
-
   </head>
 
 <body>
@@ -29,10 +26,15 @@
     <main class="invitation-content">
 
       <!-- SVG de la mariposa animada -->
-      <div class="mariposa-contenedor">
+       <div class="mariposa-contenedor">
         <svg width="773" height="707" viewBox="0 0 773 707" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="773" height="707" />
-          <g id="Cuerpo">
+          <defs>
+            <filter id="sombra-mariposa" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#B99428" flood-opacity="0.55" />
+            </filter>
+          </defs>
+          <g id="Cuerpo"filter="url(#sombra-mariposa)">
             <!-- Cuerpo central de la mariposa -->
             <path
               d="M412.722 306.421C411.32 292.888 409.33 279.26 405.044 267.452C400.958 256.175 394.375 244.958 386.615 241.907C378.854 244.958 372.284 256.175 368.186 267.452C363.899 279.26 361.921 292.888 360.508 306.421C354.632 363.083 358.718 423.689 374.721 474.406C381.257 495.126 391.961 495.126 398.496 474.406C414.5 423.689 418.598 363.095 412.722 306.421Z"
@@ -48,7 +50,7 @@
             <path d="M397.661 224.913C414.783 188.067 438.97 154.429 467.515 125.796" stroke="black" stroke-width="4"
               stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
           </g>
-          <g id="alaizquierda">
+          <g id="alaizquierda"filter="url(#sombra-mariposa)">
             <!-- Ala izquierda (detallada) -->
             <path
               d="M371.824 257.622C333.6 204.687 291.631 153.512 239.3 115.255C186.98 76.9973 123.014 52.393 58.9297 57.7239C43.8921 58.9783 26.5699 63.7182 20.8233 78.0105C15.7597 90.6142 22.1304 104.798 29.0899 116.425C40.8775 136.108 54.8671 154.634 63.3221 176.042C76.2284 208.703 75.1803 245.067 78.6306 280.116C82.081 315.177 92.0197 352.687 119.587 373.757C142.267 391.089 172.496 393.742 200.757 392.186C258.282 389.026 311.203 370.875 357.976 341.41"
@@ -75,7 +77,7 @@
               d="M270.988 465.432C266.631 475.359 263.028 485.779 262.086 496.622C261.756 500.349 261.768 504.22 263.063 507.718C264.359 511.216 267.173 514.315 270.765 515.039C274.851 515.859 279.043 513.435 281.61 510.07C284.165 506.705 285.437 502.508 286.662 498.431C294.493 472.488 303.066 446.786 312.392 421.374C314.688 415.114 317.738 408.806 319.516 402.378C321.73 394.333 315.831 401.123 313.157 403.777C304.808 412.111 297.178 421.205 290.395 430.926C282.835 441.733 276.323 453.311 270.988 465.432Z"
               stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
           </g>
-          <g id="aladerecha">
+          <g id="aladerecha"filter="url(#sombra-mariposa)">
             <!-- Ala derecha (detallada) -->
             <path
               d="M402.182 257.622C440.407 204.687 482.376 153.512 534.707 115.255C587.027 76.9973 650.993 52.393 715.065 57.7239C730.115 58.9783 747.425 63.7182 753.172 78.0105C758.247 90.6142 751.865 104.798 744.905 116.425C733.118 136.108 719.128 154.634 710.673 176.042C697.767 208.703 698.815 245.067 695.364 280.116C691.914 315.177 681.975 352.687 654.408 373.757C631.728 391.089 601.499 393.742 573.238 392.186C515.713 389.026 462.792 370.875 416.019 341.41"
@@ -128,58 +130,52 @@
     </main>
   </section>
 
-
-<section class="seccion-curva">
-  <div class="curva-transicion"></div>
-</section>
-
+<div class="curva-decorativa">
+<img src="iconos/lineaA.svg" alt="Decorative abstract wavy lines in soft beige and pink tones forming a gentle curve, evoking a warm and elegant atmosphere; no text present" />
+</div>
 
   <!-- ========================================================
        SECCIÓN 2: CUENTA REGRESIVA
   ========================================================= -->
   <section class="seccion-countdown">
+  <div class="countdown-fondo">
+    <img src="iconos/reloj.png" alt="Fondo decorativo">
+  </div>
 
+  <div class="countdown-contenido">
+    <div class="countdown-header">
+      <span class="countdown-title-text">Falta</span>
+    </div>
 
-    <div class="countdown-container">
-      <div class="borde-circular">
-        <img src="iconos/circuloContador.svg" alt="Borde dorado decorativo" />
+    <div class="countdown-timer">
+      <div class="time-block">
+        <span id="days" class="number">00</span>
+        <span class="label">días</span>
       </div>
-      <div class="countdown-header">
-        <span class="countdown-title-text">Falta</span>
-        <img src="iconos/linea.svg" alt="Adorno dorado" class="adorno-bajo-falta">
+      <div class="time-separator"></div>
+      <div class="time-block">
+        <span id="hours" class="number">00</span>
+        <span class="label">hs</span>
       </div>
-      <div class="countdown-timer">
-        <div class="time-block">
-          <span id="days" class="number">00</span>
-          <span class="label">días</span>
-        </div>
-        <div class="time-separator"></div>
-        <div class="time-block">
-          <span id="hours" class="number">00</span>
-          <span class="label">hs</span>
-        </div>
-        <div class="time-separator"></div>
-        <div class="time-block">
-          <span id="minutes" class="number">00</span>
-          <span class="label">min</span>
-        </div>
-        <div class="time-separator"></div>
-        <div class="time-block">
-          <span id="seconds" class="number">00</span>
-          <span class="label">seg</span>
-        </div>
+      <div class="time-separator"></div>
+      <div class="time-block">
+        <span id="minutes" class="number">00</span>
+        <span class="label">min</span>
       </div>
-      <div class="countdown-footer">
-        <svg class="corazon-palpita " height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M24 41C24 41 4 27.6 4 15.5C4 7.97 11.06 2 18.5 2C22.12 2 24.88 4.23 24.88 4.23C24.92 4.26 25.08 4.26 25.12 4.23C25.12 4.23 27.88 2 31.5 2C38.94 2 46 7.97 46 15.5C46 27.6 24 41 24 41Z"
-            fill="#BFA881" />
-        </svg>
-
+      <div class="time-separator"></div>
+      <div class="time-block">
+        <span id="seconds" class="number">00</span>
+        <span class="label">seg</span>
       </div>
     </div>
-  </section>
 
+    <div class="countdown-footer">
+      <svg class="corazon-palpita" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 41C24 41 4 27.6 4 15.5C4 7.97 11.06 2 18.5 2C22.12 2 24.88 4.23 24.88 4.23C24.92 4.26 25.08 4.26 25.12 4.23C25.12 4.23 27.88 2 31.5 2C38.94 2 46 7.97 46 15.5C46 27.6 24 41 24 41Z" fill="#BFA881" />
+      </svg>
+    </div>
+  </div>
+</section>
   <!-- ========================================================
        SECCIÓN 3: DETALLES DEL EVENTO (Ceremonia y Fiesta)
   ========================================================= -->
@@ -193,18 +189,17 @@
         <h2>Ceremonia</h2>
         <div class="detalle">
           <h3>Día</h3>
-          <a href="#" class="boton-personalizado">Sábado 25 de Octubre - 16:00 hrs</a>
-
+          <p>Sábado 25 de Octubre - 16:00 hrs</p>
         </div>
         <div class="detalle">
           <h3>Lugar</h3>
-          <a href="#" class="boton-personalizado">Iglesia católica "Belen"</a>
+          <p>Iglesia católica "Belen"</p>
         </div>
         <div class="detalle">
           <h3>Dirección</h3>
           <p>Km 32.5 Carr. de Circunvalacion al Lago de Amatitlan</p>
           <div class="botones-contenedor">
-            <a href="https://www.google.com/maps/search/?api=1&query=Iglesia+católica+Belen,+Amatitlan" target="_blank"
+            <a href="https://maps.app.goo.gl/fiKAD43HFXUMFPho9" target="_blank"
               class="boton-ubicacion">GOOGLE MAPS</a>
             <a href="https://waze.com/ul/h9fxd56dk3" target="_blank" class="boton-ubicacion boton-waze">WAZE</a>
           </div>
@@ -212,7 +207,6 @@
 
 
       </section>
-
       <!-- === FIESTA === -->
       <section class="evento fiesta">
         <div class="icono">
@@ -231,7 +225,7 @@
           <h3>Dirección</h3>
           <p>KM 32.6, Carr. de Circunvalacion al Lago de Amatitlan</p>
           <div class="botones-contenedor">
-            <a href="https://www.google.com/maps/search/?api=1&query=La+Casa+del+Lago+Amatitl%C3%A1n,+Amatitlan"
+            <a href="https://maps.app.goo.gl/uoELZ4nTh6bBsj1y8"
               target="_blank" class="boton-ubicacion">GOOGLE MAPS</a>
             <a href="https://waze.com/ul/h9fxd567ye" target="_blank" class="boton-ubicacion boton-waze">WAZE</a>
           </div>
@@ -246,48 +240,35 @@
   <section class="seccion-galeria">
     <div class="galeria-header">
       <h2 class="galeria-title">Un recorrido de estos 15 años</h2>
-      <p class="galeria-subtitle">Junto a personas que son muy importantes en mi vida</p>
       <div class="galeria-icons">
-        <img src="iconos/camara.png" alt="Cámara" class="camara-icon">
       </div>
     </div>
-
     <!-- Carrusel de fotos -->
     <div class="slider-container">
       <div class="slider">
         <div class="slide">
-          <div class="polaroid"><img src="Fotos/foto1.jpg" alt=""></div>
-        </div>
-        <div class="slide">
-          <div class="polaroid"><img src="Fotos/foto10.jpg" alt=""></div>
-        </div>
-        <div class="slide">
-          <div class="polaroid"><img src="Fotos/foto11.jpg" alt=""></div>
-        </div>
-        <div class="slide">
-          <div class="polaroid"><img src="Fotos/foto20.jpg" alt=""></div>
-        </div>
-        <div class="slide">
-          <div class="polaroid"><img src="Fotos/foto19.jpg" alt=""></div>
-        </div>
-        <div class="slide">
-          <div class="polaroid"><img src="Fotos/foto18.jpg" alt=""></div>
+          <div class="polaroid"><img src="/Fotos/foto1.jpg" alt=""></div>
         </div>
 
         <button onclick="prevSlide()" class="slider-btn slider-btn-prev">‹</button>
         <button onclick="nextSlide()" class="slider-btn slider-btn-next">›</button>
       </div>
 
-
-
       <!-- Puntos de navegación del slider -->
       <div class="slider-dots">
         <span class="dot active"></span>
         <span class="dot"></span>
+         <span class="dot"></span>
+          <span class="dot"></span>
 
       </div>
     </div>
   </section>
+
+
+<div class="curva-decorativa3">
+  <img src="iconos/lineaB.svg" alt="Decoración curva" />
+</div> 
 
 
   <!---Fiesta/Drescode-->
@@ -303,8 +284,6 @@
         <p>¿Cuál es la canción que no debe faltar en la playlist de la fiesta?</p>
         <button class="boton-rosa" onclick="mostrarPopup('popupmusica')">Sugerir canción</button>
       </div>
-
-
       <div class="tarjeta">
         <h3>Dress Code</h3>
         <div class="icono">
@@ -313,8 +292,6 @@
         <p>Una orientación para tu vestuario</p>
         <button class="boton-rosa" onclick="mostrarPopup('popupDressCode')">Ver Más</button>
       </div>
-
-
       <div class="tarjeta">
         <h3>Tips y Notas</h3>
         <div class="icono">
@@ -329,6 +306,7 @@
 
 
 
+  
   <!-- ========================================================
        MODALES
   ========================================================= -->
@@ -387,7 +365,10 @@
     </div>
   </div>
 
-  <!---Regalos-->
+  <div class="curva-decorativa2">
+   <img src="iconos/Linea1.svg" alt="Decoración curva entre secciones" />
+</div>
+
   <section class="seccion-regalos">
     <h2>Regalos</h2>
     <h3>Buzón de obsequios</h3>
@@ -509,5 +490,7 @@
   </script>
 
 </body>
-
+<footer>
+  <h5>Hecho con Amor por </h5>
+</footer>
 </html>

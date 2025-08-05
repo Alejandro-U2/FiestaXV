@@ -10,11 +10,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: #FFD7D7;
-    ;
-    /* Fondo general rosado claro */
-    color: #3B3B3B;
-    /* Texto gris oscuro elegante */
+    background-color: #FFF1F0;
+    color: #575756;
 }
 
 /* ===========================================
@@ -32,10 +29,9 @@ body {
     text-align: center;
     padding: 2rem;
     box-sizing: border-box;
-    background-color: #FFF1F0;
+    background-color: #FFD7D7;
     color: #3B3B3B;
     overflow: hidden;
-    /* Que nada sobresalga (flores, mariposa, etc.) */
 }
 
 /* Flor decorativa superior (centrada) */
@@ -88,7 +84,6 @@ body {
     width: 45px;
     height: 45px;
     background-color: #D4AF37;
-    /* Dorado */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -105,7 +100,6 @@ body {
     box-shadow: 0 0 12px #B99428cc;
 }
 
-/* Adorno central decorativo (si usas alguna imagen SVG) */
 .central-ornament {
     width: 200px;
     margin-bottom: 1rem;
@@ -117,12 +111,17 @@ body {
    2.1 MARIPOSA ANIMADA
    ====================== */
 /* Contenedor de la mariposa flotante */
+
+.mariposa-contenedor svg path {
+    stroke: #000000 !important;
+}
+
 .mariposa-contenedor {
     position: absolute;
     top: 1%;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 250px;
     height: auto;
     z-index: 10;
     perspective: 800px;
@@ -166,7 +165,7 @@ body {
 .line {
     flex-grow: 1;
     height: 1px;
-    background-color: #E0A2A2;
+    background-color: #C2AB7F;
 }
 
 .date {
@@ -194,7 +193,7 @@ body {
 .divider-line {
     width: 150px;
     height: 1px;
-    background-color: #E0A2A2;
+    background-color: #C2AB7F;
     margin: 1.5rem auto;
 }
 
@@ -233,116 +232,105 @@ body {
 }
 
 
+
+
+
 /* ===========================================
    3. SECCIÓN DE CUENTA REGRESIVA
    =========================================== */
 .seccion-countdown {
-    background-color: #FFD7D7;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Puedes ajustar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* Contenedor circular de la cuenta regresiva */
-.countdown-container {
-    background-color: #FFF1F0;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(224, 162, 162, 0.4);
-    position: relative;
+/* Imagen de fondo */
+.countdown-fondo {
+  position: absolute;
+  width: 550px;
+  height: 550px;
 }
 
-/* Borde decorativo externo */
-.countdown-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.7;
+.countdown-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+.countdown-contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500%;
+  height: 500%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+/* Resto de estilos reutilizados */
 .countdown-header {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: #3B3B3B;
+  margin-bottom: 10px;
 }
 
-
-.countdown-title-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    color: #3B3B3B;
-    margin-bottom: 5px;
-
-}
-
-.adorno-bajo-falta {
-    display: block;
-    margin: 0.5em auto 0.2em auto;
-    max-width: 110px;
-    width: 100%;
-    height: auto;
-    opacity: 0.9;
-}
-
-/* Bloques de números y etiquetas (días, horas, etc.) */
 .countdown-timer {
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-    font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .time-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #3B3B3B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3B3B3B;
 }
 
 .time-block .number {
-    font-size: 2.5em;
-    font-weight: 700;
-    line-height: 1;
+  font-size: 2.5em;
+  font-weight: 700;
 }
 
 .time-block .label {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-top: 5px;
+  font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 .time-separator {
-    width: 2px;
-    height: 25px;
-    background-color: #E0A2A2;
-    align-self: center;
+  width: 2px;
+  height: 25px;
+  background-color: #E0A2A2;
+  align-self: center;
 }
 
 .countdown-footer {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .corazon-palpita {
-    animation: palpitar 2s infinite;
-    transform-origin: center;
+  animation: palpitar 2s infinite;
+  transform-origin: center;
 }
 
+.countdown-title-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  color: #575756;
+  margin: 0;
+}
 @keyframes palpitar {
 
     0%,
@@ -367,33 +355,9 @@ body {
     }
 }
 
-.borde-circular {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    /* Ajusta el tamaño según tu SVG y container */
-    height: 400px;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    /* Debajo del contenido del countdown */
-    pointer-events: none;
-    /* Para que no bloquee clics */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.borde-circular img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
 
 .countdown-container {
     position: relative;
-    /* Asegura contexto para absolute */
     z-index: 2;
     /* Encima del círculo dorado */
 }
@@ -402,41 +366,17 @@ body {
    4. SECCIÓN DE DETALLES DEL EVENTO
    =========================================== */
 .seccion-detalles {
-    background-color: #FFD7D7;
-    color: #3B3B3B;
+    background-color: #FFF1F0;
+    color: #575756;
     padding: 60px 20px;
     text-align: center;
 }
-
-.boton-personalizado {
-    display: inline-block;
-
-    padding: 12px 28px;
-    background-color: #dbc397;
-    /* rosa suave */
-    color: #5a4a4a;
-    /* texto gris oscuro para buen contraste */
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(255, 214, 214, 0.5);
-    cursor: pointer;
+.seccion-detalles h2 {
+    font-family: 'Playfair Display', serif;
+    color: #575756;
+    margin-bottom: 20px;
+    font-size: 2.2em;
 }
-
-.boton-personalizado:hover {
-    background-color: #fce3e3;
-    /* tono más claro al pasar el mouse */
-    color: #000;
-    box-shadow: 0 6px 18px rgba(255, 180, 180, 0.6);
-    transform: translateY(-2px);
-}
-
-
-
 .container-detalles {
     display: flex;
     justify-content: center;
@@ -446,94 +386,48 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* Tarjeta individual de evento (ceremonia/fiesta) */
 .evento {
-
     border-radius: 15px;
     padding: 30px;
     text-align: center;
     width: 400px;
     flex-shrink: 0;
-    color: #3B3B3B;
-
+    color: #575756;
+    background: #FFD7D7;
+    box-shadow: 0 2px 12px #FFD6D6cc;
+    border: 1.5px solid #C2AB7F;
 }
-
 .icono {
-    background-color: rgb(0, 0, 0);
+    background-color: #C2AB7F;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 150px; height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 20px;
+    box-shadow: 0 4px 20px #C2AB7F33;
 }
-
-.icono-iglesia {
+.icono-iglesia, .icono-fiesta {
     max-width: 70%;
     max-height: 70%;
     filter: brightness(0) invert(1);
 }
-
-.icono-fiesta {
-    max-width: 60%;
-    max-height: 60%;
-    filter: brightness(0) invert(1);
-}
-
-.seccion-detalles h2 {
-    font-family: 'Playfair Display', serif;
-    color: #3B3B3B;
-    margin-bottom: 20px;
-    font-size: 2.2em;
-}
-
 .detalle {
     margin-bottom: 25px;
 }
-
 .detalle h3 {
     color: #3B3B3B;
     font-weight: bold;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
-
 .detalle p {
     margin-bottom: 10px;
     font-size: 1em;
-    color: #3B3B3B;
+    color: #575756;
 }
-
-/* Botones generales para links, confirmación y ubicaciones */
-.boton-accion,
-.boton-asistencia {
-    background-color: #D4AF37;
-    color: #FFF1F0;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    box-shadow: 0 0 6px #D4AF37aa;
-
-
-    cursor: pointer;
-}
-
-.boton-accion:hover,
-.boton-asistencia:hover {
-    background-color: #B99428;
-    box-shadow: 0 0 10px #B99428cc;
-}
-
 .botones-contenedor {
     display: flex;
     gap: 10px;
@@ -541,37 +435,49 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-/* Botón de ubicación / Waze */
-.boton-ubicacion {
-    background-color: #D4AF37;
-    color: #FFF1F0;
+/* Botones pastel y dorado solo para microdetalles */
+.boton-accion,
+.boton-asistencia {
+    background-color: #C2AB7F;
+    color: #575756;
     border: none;
     padding: 12px 25px;
     border-radius: 50px;
     cursor: pointer;
     font-size: 0.9em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
-    box-shadow: 0 0 6px #D4AF37aa;
+    box-shadow: 0 0 8px #FFD6D6cc;
+    border: 2px solid #C2AB7F;
+}
+.boton-accion:hover,
+.boton-asistencia:hover {
+    background-color: #FFD6D6;
+    color: #575756;
+    border: 2px solid #FFD6D6;
 }
 
+/* Botón ubicación con rosa suave */
+.boton-ubicacion {
+    background-color: #FFD7D7;
+    color: #575756;
+    border: 2px solid #C2AB7F;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 0 6px #FFD6D6aa;
+}
 .boton-ubicacion:hover {
-    background-color: #B99428;
-    box-shadow: 0 0 10px #B99428cc;
-}
-
-.boton-waze {
-    background-color: #2D89EF;
-    color: white;
-    box-shadow: 0 0 6px #2D89EFaa;
-}
-
-.boton-waze:hover {
-    background-color: #1d6fcb;
-    box-shadow: 0 0 10px #1d6fcbcc;
+    background-color: #C2AB7F;
+    color: #FFF1F0;
+    border: 2px solid #C2AB7F;
 }
 
 
@@ -580,7 +486,7 @@ body {
    5. SECCIÓN DE GALERÍA DE FOTOS
    =========================================== */
 .seccion-galeria {
-    background-color: #FFD7D7;
+    background-color: #FFF1F0;
     padding: 60px 20px;
     text-align: center;
     position: relative;
@@ -1084,12 +990,13 @@ body {
 }
 
 .tarjeta {
-    background-color: #ffffff;
+    background-color: #FFD7D7;
     border-radius: 16px;
     padding: 30px 20px;
     width: 300px;
     max-width: 90%;
     text-align: center;
+    border: 1.5px solid #C2AB7F;
 }
 
 .tarjeta h3 {
@@ -1303,19 +1210,46 @@ h3 {
     color: #FFF1F0;
 }
 
-.curva-transicion {
-  background-image: url('iconos/curva1.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  position: relative; /* contenedor con posición relativa */
-  height: 150px;       /* ajusta según el alto de la curva */
+/* ===========================================
+   9. CURVA DE TRANSICIÓN
+   =========================================== */
+.curva-decorativa {
   width: 100%;
-  z-index: 2;
+  height: auto;
+  line-height: 0;
+  background-color: #FFD7D7; /* Mismo color que .seccion-bienvenida */
+   margin-top: 0px; /* Puedes usar valores como -20px, -40px, etc. */
+
+}
+.curva-decorativa img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.seccion-curva{
- position: relative;
-  height: 150px;
+.curva-decorativa2 {
   width: 100%;
+  height: auto;
+  line-height: 0;
+background-color: #FFF1F0; /* igual que la sección de arriba */
+  margin-bottom: -4px; /* para solapar con la siguiente sección y eliminar línea */
+}
+
+.curva-decorativa2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.curva-decorativa3 {
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  margin-bottom: -4px; /* para solapar con la siguiente sección y eliminar línea */
+}
+
+.curva-decorativa3 img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
