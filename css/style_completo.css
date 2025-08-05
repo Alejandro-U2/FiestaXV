@@ -1253,3 +1253,10 @@ background-color: #FFF1F0; /* igual que la sección de arriba */
   height: auto;
   display: block;
 }
+
+
+footer{
+    background-color: #E0A2A2;
+    text-align: center;
+    padding: 20px;
+}
